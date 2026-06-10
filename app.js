@@ -108,7 +108,7 @@ const results = {
   collagen: {
     name: '逆龄胶原系', bottle: '活力担当', color: '#188d45',
     ratio: { acid: 35, sweet: 65 },
-    image: 'assets/posters/result_collagen.svg',
+    image: 'assets/posters/result_collagen.png',
     rule: s => s.nostalgia >= 13 && s.relax >= 6,
     copy: '内心充盈，热爱生活的满级玩家。你总能量满满，笑对挑战，享受当下。',
     coupon: '口令：逆龄胶原，满级玩家'
@@ -116,7 +116,7 @@ const results = {
   classic: {
     name: '经典引力系', bottle: '初心守护', color: '#d99a27',
     ratio: { acid: 25, sweet: 75 },
-    image: 'assets/posters/result_classic.svg',
+    image: 'assets/posters/result_classic.png',
     rule: s => s.nostalgia >= 13,
     copy: '拥有纯粹底色的初心守护者。简单的快乐、稳定的陪伴，是你最珍贵的底色。',
     coupon: '口令：经典引力，初心守护'
@@ -124,7 +124,7 @@ const results = {
   peach: {
     name: '浪漫蜜桃系', bottle: '治愈担当', color: '#e35d86',
     ratio: { acid: 30, sweet: 70 },
-    image: 'assets/posters/result_peach.svg',
+    image: 'assets/posters/result_peach.png',
     rule: s => s.sweet >= s.sour + 4 && s.relax >= 5,
     copy: '自带浪漫滤镜，朋友圈里的“治愈系”担当。你不张扬，却总能温柔治愈身边人。',
     coupon: '口令：浪漫蜜桃，回甘加倍'
@@ -132,7 +132,7 @@ const results = {
   berry: {
     name: '元气草莓系', bottle: '整活担当', color: '#e1302a',
     ratio: { acid: 45, sweet: 55 },
-    image: 'assets/posters/result_berry.svg',
+    image: 'assets/posters/result_berry.png',
     rule: s => s.energy >= 10 || s.social >= 11,
     copy: '直球表达，最会整活的甜酷显眼包。你一出现，气氛立刻拉满。',
     coupon: '口令：元气草莓，快乐上线'
@@ -140,7 +140,7 @@ const results = {
   bacteria: {
     name: '畅爽菌菌系', bottle: '清醒担当', color: '#2b95d6',
     ratio: { acid: 55, sweet: 45 },
-    image: 'assets/posters/result_bacteria.svg',
+    image: 'assets/posters/result_bacteria.png',
     rule: s => true,
     copy: '自带“去油腻”和“消食”属性，人间清醒去油剂。酸爽爽口，快乐不油腻。',
     coupon: '口令：畅爽菌菌，清醒快乐'
@@ -220,7 +220,7 @@ function showResult() {
 
   const link = $('downloadLink');
   link.href = finalResult.image;
-  link.download = `AD钙奶人格瓶_${finalResult.name}.svg`;
+  link.download = `AD钙奶人格瓶_${finalResult.name}.png`;
   link.classList.remove('is-ready');
   showScreen('result');
 }
@@ -245,7 +245,7 @@ function drawPoster() {
   if (!finalResult) return;
   const link = $('downloadLink');
   link.href = finalResult.image;
-  link.download = `AD钙奶人格瓶_${finalResult.name}.svg`;
+  link.download = `AD钙奶人格瓶_${finalResult.name}.png`;
   link.classList.add('is-ready');
   try {
     link.click();
