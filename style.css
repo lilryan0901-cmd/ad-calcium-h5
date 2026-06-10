@@ -100,21 +100,29 @@ button { border: 0; cursor: pointer; }
   min-height: 100svh;
   padding: 0;
   background: #f7e5bd;
+  align-items: center;
+  justify-content: flex-start;
+}
+.cover-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1086 / 1448;
+  max-height: 100svh;
+  flex: 0 0 auto;
 }
 .cover-poster {
-  position: absolute;
-  inset: 0;
+  display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   z-index: 1;
 }
 .cover-start-hit {
   position: absolute;
-  left: 17%;
-  right: 17%;
-  bottom: 15.5%;
-  height: 8.5%;
+  left: 23%;
+  top: 75%;
+  width: 55%;
+  height: 7.5%;
   z-index: 2;
   border: 0;
   border-radius: 999px;
