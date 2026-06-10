@@ -97,7 +97,7 @@ button { border: 0; cursor: pointer; }
   color: #251f1b;
 }
 .screen-cover {
-  min-height: 100svh;
+  min-height: 0;
   padding: 0;
   background: #f7e5bd;
   align-items: center;
@@ -110,14 +110,14 @@ button { border: 0; cursor: pointer; }
 .cover-frame {
   position: relative;
   width: 100%;
-  min-height: 100svh;
+  aspect-ratio: 1086 / 1448;
   flex: 0 0 auto;
   overflow: hidden;
 }
 .cover-fill {
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(rgba(247,229,189,.34), rgba(247,229,189,.44)), url("./assets/cover_poster.png");
+  background-image: linear-gradient(rgba(247,229,189,.34), rgba(247,229,189,.44)), url("./assets/cover_poster.png?v=cover-bottle-2");
   background-size: cover;
   background-position: center top;
   filter: blur(12px) saturate(.96);
@@ -135,16 +135,14 @@ button { border: 0; cursor: pointer; }
 }
 .cover-start-hit {
   position: absolute;
-  left: 20%;
-  top: 75%;
-  width: 60%;
-  height: 8%;
+  inset: 0;
   z-index: 2;
   border: 0;
-  border-radius: 999px;
+  border-radius: 0;
   background: transparent;
   color: transparent;
   box-shadow: none;
+  cursor: pointer;
 }
 .cover-start-hit:focus-visible {
   outline: 3px solid rgba(24,141,69,.55);
@@ -355,6 +353,5 @@ button { border: 0; cursor: pointer; }
 @media (min-width: 431px) {
   .phone-shell { min-height: 860px; border-radius: 34px; }
   .screen { min-height: 860px; }
-  .screen-cover,
-  .cover-frame { min-height: 860px; }
+  .screen-cover { min-height: 0; }
 }
